@@ -1,1967 +1,3022 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Flatty - Flat administration template</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
-    
-    <!--[if lt IE 9]>
-    <script src='assets/javascripts/html5shiv.js' type='text/javascript'></script>
-    <![endif]-->
-    <link href='assets/stylesheets/bootstrap/bootstrap.css' media='all' rel='stylesheet' type='text/css' />
-    <link href='assets/stylesheets/bootstrap/bootstrap-responsive.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / jquery ui -->
-    <link href='assets/stylesheets/jquery_ui/jquery-ui-1.10.0.custom.css' media='all' rel='stylesheet' type='text/css' />
-    <link href='assets/stylesheets/jquery_ui/jquery.ui.1.10.0.ie.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / switch buttons -->
-    <link href='assets/stylesheets/plugins/bootstrap_switch/bootstrap-switch.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / xeditable -->
-    <link href='assets/stylesheets/plugins/xeditable/bootstrap-editable.css' media='all' rel='stylesheet' type='text/css' />
-    <link href='assets/stylesheets/plugins/common/bootstrap-wysihtml5.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / wysihtml5 (wysywig) -->
-    <link href='assets/stylesheets/plugins/common/bootstrap-wysihtml5.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / jquery file upload -->
-    <link href='assets/stylesheets/plugins/jquery_fileupload/jquery.fileupload-ui.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / full calendar -->
-    <link href='assets/stylesheets/plugins/fullcalendar/fullcalendar.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / select2 -->
-    <link href='assets/stylesheets/plugins/select2/select2.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / mention -->
-    <link href='assets/stylesheets/plugins/mention/mention.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / tabdrop (responsive tabs) -->
-    <link href='assets/stylesheets/plugins/tabdrop/tabdrop.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / jgrowl notifications -->
-    <link href='assets/stylesheets/plugins/jgrowl/jquery.jgrowl.min.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / datatables -->
-    <link href='assets/stylesheets/plugins/datatables/bootstrap-datatable.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / dynatrees (file trees) -->
-    <link href='assets/stylesheets/plugins/dynatree/ui.dynatree.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / color picker -->
-    <link href='assets/stylesheets/plugins/bootstrap_colorpicker/bootstrap-colorpicker.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / datetime picker -->
-    <link href='assets/stylesheets/plugins/bootstrap_datetimepicker/bootstrap-datetimepicker.min.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / daterange picker) -->
-    <link href='assets/stylesheets/plugins/bootstrap_daterangepicker/bootstrap-daterangepicker.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / flags (country flags) -->
-    <link href='assets/stylesheets/plugins/flags/flags.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / slider nav (address book) -->
-    <link href='assets/stylesheets/plugins/slider_nav/slidernav.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / fuelux (wizard) -->
-    <link href='assets/stylesheets/plugins/fuelux/wizard.css' media='all' rel='stylesheet' type='text/css' />
-    <!-- / flatty theme -->
-    <link href='assets/stylesheets/light-theme.css' id='color-settings-body-color' media='all' rel='stylesheet' type='text/css' />
-    <!-- / demo -->
-    <link href='assets/stylesheets/demo.css' media='all' rel='stylesheet' type='text/css' />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-<body class='contrast-red '>
-<header>
-    <div class='navbar'>
-        <div class='navbar-inner'>
-            <div class='container-fluid'>
-                <a class='brand' href='index.html'>
-                    <i class='icon-heart-empty'></i>
-                    <span class='hidden-phone'>Flatty</span>
-                </a>
-                <a class='toggle-nav btn pull-left' href='#'>
-                    <i class='icon-reorder'></i>
-                </a>
-                <ul class='nav pull-right'>
-                    <li class='dropdown light only-icon'>
-                        <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-                            <i class='icon-adjust'></i>
-                        </a>
-                        <ul class='dropdown-menu color-settings'>
-                            <li class='color-settings-body-color'>
-                                <div class='color-title'>Body color</div>
-                                <a data-change-to='assets/stylesheets/light-theme.css' href='#'>
-                                    Light
-                                    <small>(default)</small>
-                                </a>
-                                <a data-change-to='assets/stylesheets/dark-theme.css' href='#'>
-                                    Dark
-                                </a>
-                                <a data-change-to='assets/stylesheets/dark-blue-theme.css' href='#'>
-                                    Dark blue
-                                </a>
-                            </li>
-                            <li class='divider'></li>
-                            <li class='color-settings-contrast-color'>
-                                <div class='color-title'>Contrast color</div>
-                                <a href="#" data-change-to="contrast-red"><i class='icon-adjust text-red'></i>
-                                    Red
-                                    <small>(default)</small>
-                                </a>
-                                <a href="#" data-change-to="contrast-blue"><i class='icon-adjust text-blue'></i>
-                                    Blue
-                                </a>
-                                <a href="#" data-change-to="contrast-orange"><i class='icon-adjust text-orange'></i>
-                                    Orange
-                                </a>
-                                <a href="#" data-change-to="contrast-purple"><i class='icon-adjust text-purple'></i>
-                                    Purple
-                                </a>
-                                <a href="#" data-change-to="contrast-green"><i class='icon-adjust text-green'></i>
-                                    Green
-                                </a>
-                                <a href="#" data-change-to="contrast-muted"><i class='icon-adjust text-muted'></i>
-                                    Muted
-                                </a>
-                                <a href="#" data-change-to="contrast-fb"><i class='icon-adjust text-fb'></i>
-                                    Facebook
-                                </a>
-                                <a href="#" data-change-to="contrast-dark"><i class='icon-adjust text-dark'></i>
-                                    Dark
-                                </a>
-                                <a href="#" data-change-to="contrast-pink"><i class='icon-adjust text-pink'></i>
-                                    Pink
-                                </a>
-                                <a href="#" data-change-to="contrast-grass-green"><i class='icon-adjust text-grass-green'></i>
-                                    Grass green
-                                </a>
-                                <a href="#" data-change-to="contrast-sea-blue"><i class='icon-adjust text-sea-blue'></i>
-                                    Sea blue
-                                </a>
-                                <a href="#" data-change-to="contrast-banana"><i class='icon-adjust text-banana'></i>
-                                    Banana
-                                </a>
-                                <a href="#" data-change-to="contrast-dark-orange"><i class='icon-adjust text-dark-orange'></i>
-                                    Dark orange
-                                </a>
-                                <a href="#" data-change-to="contrast-brown"><i class='icon-adjust text-brown'></i>
-                                    Brown
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class='dropdown medium only-icon widget'>
-                        <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-                            <i class='icon-rss'></i>
-                            <div class='label'>5</div>
-                        </a>
-                        <ul class='dropdown-menu'>
-                            <li>
-                                <a href='#'>
-                                    <div class='widget-body'>
-                                        <div class='pull-left icon'>
-                                            <i class='icon-user text-success'></i>
-                                        </div>
-                                        <div class='pull-left text'>
-                                            John Doe signed up
-                                            <small class='muted'>just now</small>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class='divider'></li>
-                            <li>
-                                <a href='#'>
-                                    <div class='widget-body'>
-                                        <div class='pull-left icon'>
-                                            <i class='icon-inbox text-error'></i>
-                                        </div>
-                                        <div class='pull-left text'>
-                                            New Order #002
-                                            <small class='muted'>3 minutes ago</small>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class='divider'></li>
-                            <li>
-                                <a href='#'>
-                                    <div class='widget-body'>
-                                        <div class='pull-left icon'>
-                                            <i class='icon-comment text-warning'></i>
-                                        </div>
-                                        <div class='pull-left text'>
-                                            America Leannon commented Flatty with veeery long text.
-                                            <small class='muted'>1 hour ago</small>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class='divider'></li>
-                            <li>
-                                <a href='#'>
-                                    <div class='widget-body'>
-                                        <div class='pull-left icon'>
-                                            <i class='icon-user text-success'></i>
-                                        </div>
-                                        <div class='pull-left text'>
-                                            Jane Doe signed up
-                                            <small class='muted'>last week</small>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class='divider'></li>
-                            <li>
-                                <a href='#'>
-                                    <div class='widget-body'>
-                                        <div class='pull-left icon'>
-                                            <i class='icon-inbox text-error'></i>
-                                        </div>
-                                        <div class='pull-left text'>
-                                            New Order #001
-                                            <small class='muted'>1 year ago</small>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class='widget-footer'>
-                                <a href='#'>All notifications</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class='dropdown dark user-menu'>
-                        <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-                            <img alt='Mila Kunis' height='23' src='assets/images/avatar.jpg' width='23' />
-                            <span class='user-name hidden-phone'>Mila Kunis</span>
-                            <b class='caret'></b>
-                        </a>
-                        <ul class='dropdown-menu'>
-                            <li>
-                                <a href='user_profile.html'>
-                                    <i class='icon-user'></i>
-                                    Profile
-                                </a>
-                            </li>
-                            <li>
-                                <a href='user_profile.html'>
-                                    <i class='icon-cog'></i>
-                                    Settings
-                                </a>
-                            </li>
-                            <li class='divider'></li>
-                            <li>
-                                <a href='sign_in.html'>
-                                    <i class='icon-signout'></i>
-                                    Sign out
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <form accept-charset="UTF-8" action="search_results.html" class="navbar-search pull-right hidden-phone" method="get" /><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-                    <button class="btn btn-link icon-search" name="button" type="submit"></button>
-                    <input autocomplete="off" class="search-query span2" id="q_header" name="q" placeholder="Search..." type="text" value="" />
-                </form>
-            </div>
-        </div>
-    </div>
-</header>
-<div id='wrapper'>
-<div id='main-nav-bg'></div>
-<nav class='' id='main-nav'>
-<div class='navigation'>
-<div class='search'>
-    <form accept-charset="UTF-8" action="search_results.html" method="get" /><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-        <div class='search-wrapper'>
-            <input autocomplete="off" class="search-query" id="q" name="q" placeholder="Search..." type="text" value="" />
-            <button class="btn btn-link icon-search" name="button" type="submit"></button>
-        </div>
-    </form>
-</div>
-<ul class='nav nav-stacked'>
-<li class=''>
-    <a href='index.html'>
-        <i class='icon-dashboard'></i>
-        <span>Dashboard</span>
-    </a>
-</li>
-<li class=''>
-    <a class='dropdown-collapse' href='#'>
-        <i class='icon-edit'></i>
-        <span>Forms</span>
-        <i class='icon-angle-down angle-down'></i>
-    </a>
-    <ul class='nav nav-stacked'>
-        <li class=''>
-            <a href='form_styles.html'>
-                <i class='icon-caret-right'></i>
-                <span>Form styles and features</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='form_components.html'>
-                <i class='icon-caret-right'></i>
-                <span>Form components</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='validations.html'>
-                <i class='icon-caret-right'></i>
-                <span>Validations</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='wizard.html'>
-                <i class='icon-caret-right'></i>
-                <span>Wizard</span>
-            </a>
-        </li>
-    </ul>
-</li>
-<li>
-    <a class='dropdown-collapse ' href='#'>
-        <i class='icon-tint'></i>
-        <span>UI Elements & Widgets</span>
-        <i class='icon-angle-down angle-down'></i>
-    </a>
-    <ul class='nav nav-stacked'>
-        <li class=''>
-            <a href='ui_elements.html'>
-                <i class='icon-caret-right'></i>
-                <span>UI Elements</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='widgets.html'>
-                <i class='icon-caret-right'></i>
-                <span>Widgets</span>
-            </a>
-        </li>
-    </ul>
-</li>
-<li class=''>
-    <a href='buttons_and_icons.html'>
-        <i class='icon-star'></i>
-        <span>Buttons & Icons</span>
-    </a>
-</li>
-<li>
-    <a class='dropdown-collapse ' href='#'>
-        <i class='icon-cogs'></i>
-        <span>Components</span>
-        <i class='icon-angle-down angle-down'></i>
-    </a>
-    <ul class='nav nav-stacked'>
-        <li class=''>
-            <a href='charts.html'>
-                <i class='icon-bar-chart'></i>
-                <span>Charts</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='address_book.html'>
-                <i class='icon-envelope'></i>
-                <span>Address book</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='chats.html'>
-                <i class='icon-comments'></i>
-                <span>Chats</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='inplace_editing.html'>
-                <i class='icon-pencil'></i>
-                <span>In-place editing</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='filetrees.html'>
-                <i class='icon-list-ul'></i>
-                <span>File trees</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='fileupload.html'>
-                <i class='icon-file'></i>
-                <span>Fileupload</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='todo.html'>
-                <i class='icon-list-alt'></i>
-                <span>Todo list</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='wysiwyg.html'>
-                <i class='icon-paste'></i>
-                <span>WYSIWYG</span>
-            </a>
-        </li>
-    </ul>
-</li>
-<li class='active'>
-    <a href='tables.html'>
-        <i class='icon-table'></i>
-        <span>Tables</span>
-    </a>
-</li>
-<li class=''>
-    <a href='grid.html'>
-        <i class='icon-th'></i>
-        <span>Grid</span>
-    </a>
-</li>
-<li class=''>
-    <a href='type.html'>
-        <i class='icon-font'></i>
-        <span>Typography</span>
-    </a>
-</li>
-<li class=''>
-    <a href='calendar.html'>
-        <i class='icon-calendar'></i>
-        <span>Calendar</span>
-    </a>
-</li>
-<li>
-    <a class='dropdown-collapse ' href='#'>
-        <i class='icon-book'></i>
-        <span>Example pages</span>
-        <i class='icon-angle-down angle-down'></i>
-    </a>
-    <ul class='nav nav-stacked'>
-        <li class=''>
-            <a href='invoice.html'>
-                <i class='icon-money'></i>
-                <span>Invoice</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='gallery.html'>
-                <i class='icon-picture'></i>
-                <span>Gallery</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='timeline.html'>
-                <i class='icon-time'></i>
-                <span>Timeline</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='pricing_tables.html'>
-                <i class='icon-table'></i>
-                <span>Pricing tables</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='user_profile.html'>
-                <i class='icon-user'></i>
-                <span>User profile</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='err404.html'>
-                <i class='icon-question-sign'></i>
-                <span>404 Error</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='err500.html'>
-                <i class='icon-cogs'></i>
-                <span>500 Error</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='sign_in.html'>
-                <i class='icon-signin'></i>
-                <span>Sign in</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='faq.html'>
-                <i class='icon-bullhorn'></i>
-                <span>FAQ</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='orders.html'>
-                <i class='icon-inbox'></i>
-                <span>Orders</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='search_results.html'>
-                <i class='icon-search'></i>
-                <span>Search results</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='blank.html'>
-                <i class='icon-circle-blank'></i>
-                <span>Blank page</span>
-            </a>
-        </li>
-    </ul>
-</li>
-<li>
-    <a class='dropdown-collapse ' href='#'>
-        <i class='icon-cog'></i>
-        <span>Layouts</span>
-        <i class='icon-angle-down angle-down'></i>
-    </a>
-    <ul class='nav nav-stacked'>
-        <li class=''>
-            <a href='closed_navigation.html'>
-                <i class='icon-caret-right'></i>
-                <span>Closed navigation</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='fixed_header.html'>
-                <i class='icon-caret-right'></i>
-                <span>Fixed header</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='fixed_navigation.html'>
-                <i class='icon-caret-right'></i>
-                <span>Fixed navigation</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href='fixed_navigation_and_header.html'>
-                <i class='icon-caret-right'></i>
-                <span>Fixed navigation & header</span>
-            </a>
-        </li>
-    </ul>
-</li>
-<li class=''>
-    <a href='email_templates.html'>
-        <i class='icon-mail-reply'></i>
-        <span>Email templates</span>
-    </a>
-</li>
-<li>
-    <a class='dropdown-collapse' href='#'>
-        <i class='icon-folder-open-alt'></i>
-        <span>Four level dropdown</span>
-        <i class='icon-angle-down angle-down'></i>
-    </a>
-    <ul class='nav nav-stacked'>
-        <li>
-            <a class='dropdown-collapse' href='#'>
-                <i class='icon-caret-right'></i>
-                <span>Second level</span>
-                <i class='icon-angle-down angle-down'></i>
-            </a>
-            <ul class='nav nav-stacked'>
-                <li>
-                    <a class='dropdown-collapse' href='#'>
-                        <i class='icon-caret-right'></i>
-                        <span>Third level</span>
-                        <i class='icon-angle-down angle-down'></i>
-                    </a>
-                    <ul class='nav nav-stacked'>
-                        <li>
-                            <a href='#'>
-                                <i class='icon-caret-right'></i>
-                                <span>Fourth level</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href='#'>
-                                <i class='icon-caret-right'></i>
-                                <span>Another fourth level</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</li>
-</ul>
-</div>
-</nav>
-<section id='content'>
-<div class='container-fluid'>
-<div class='row-fluid' id='content-wrapper'>
-<div class='span12'>
-<div class='row-fluid'>
-    <div class='span12'>
-        <div class='page-header'>
-            <h1 class='pull-left'>
-                <i class='icon-table'></i>
-                <span>Tables</span>
-            </h1>
-            <div class='pull-right'>
-                <ul class='breadcrumb'>
-                    <li>
-                        <a href="index.html"><i class='icon-bar-chart'></i>
-                        </a>
-                    </li>
-                    <li class='separator'>
-                        <i class='icon-angle-right'></i>
-                    </li>
-                    <li class='active'>Tables</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div class='row-fluid'>
-    <div class='span12 box bordered-box blue-border' style='margin-bottom:0;'>
-        <div class='box-header blue-background'>
-            <div class='title'>Responsive table</div>
-            <div class='actions'>
-                <a href="#" class="btn box-remove btn-mini btn-link"><i class='icon-remove'></i>
-                </a>
-                <a href="#" class="btn box-collapse btn-mini btn-link"><i></i>
-                </a>
-            </div>
-        </div>
-        <div class='box-content box-no-padding'>
-            <div class='responsive-table'>
-                <div class='scrollable-area'>
-                    <table class='table' style='margin-bottom:0;'>
-                        <thead>
-                        <tr>
-                            <th>
-                                Name
-                            </th>
-                            <th>
-                                E-mail
-                            </th>
-                            <th>
-                                Status
-                            </th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Jayda Dibbert</td>
-                            <td>dallin@gmail.com</td>
-                            <td>
-                                <span class='label label-important'>Important</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Leon Reichert</td>
-                            <td>roy@hotmail.com</td>
-                            <td>
-                                <span class='label label-success'>Success</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Herminio Spinka</td>
-                            <td>willis@gmail.com</td>
-                            <td>
-                                <span class='label label-warning'>Warning</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Avery Vandervort</td>
-                            <td>ruby@gmail.com</td>
-                            <td>
-                                <span class='label label-important'>Important</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Melody Jast</td>
-                            <td>myah@gmail.com</td>
-                            <td>
-                                <span class='label label-important'>Important</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<hr class='hr-double' />
-<div class='row-fluid'>
-    <div class='span12 box bordered-box purple-border' style='margin-bottom:0;'>
-        <div class='box-header purple-background'>
-            <div class='title'>Striped non-responsive table</div>
-            <div class='actions'>
-                <a href="#" class="btn box-remove btn-mini btn-link"><i class='icon-remove'></i>
-                </a>
-                <a href="#" class="btn box-collapse btn-mini btn-link"><i></i>
-                </a>
-            </div>
-        </div>
-        <div class='box-content box-no-padding'>
-            <table class='table table-striped' style='margin-bottom:0;'>
-                <thead>
-                <tr>
-                    <th>
-                        Name
-                    </th>
-                    <th>
-                        E-mail
-                    </th>
-                    <th>
-                        Status
-                    </th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Callie Lueilwitz</td>
-                    <td>enrico@yahoo.com</td>
-                    <td>
-                        <span class='label label-important'>Important</span>
-                    </td>
-                    <td>
-                        <div class='text-right'>
-                            <a class='btn btn-success btn-mini' href='#'>
-                                <i class='icon-ok'></i>
-                            </a>
-                            <a class='btn btn-danger btn-mini' href='#'>
-                                <i class='icon-remove'></i>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Julius Predovic</td>
-                    <td>sienna@yahoo.com</td>
-                    <td>
-                        <span class='label label-success'>Success</span>
-                    </td>
-                    <td>
-                        <div class='text-right'>
-                            <a class='btn btn-success btn-mini' href='#'>
-                                <i class='icon-ok'></i>
-                            </a>
-                            <a class='btn btn-danger btn-mini' href='#'>
-                                <i class='icon-remove'></i>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Lawrence Turner</td>
-                    <td>linnie@yahoo.com</td>
-                    <td>
-                        <span class='label label-important'>Important</span>
-                    </td>
-                    <td>
-                        <div class='text-right'>
-                            <a class='btn btn-success btn-mini' href='#'>
-                                <i class='icon-ok'></i>
-                            </a>
-                            <a class='btn btn-danger btn-mini' href='#'>
-                                <i class='icon-remove'></i>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nyah Schumm</td>
-                    <td>roberto@gmail.com</td>
-                    <td>
-                        <span class='label label-success'>Success</span>
-                    </td>
-                    <td>
-                        <div class='text-right'>
-                            <a class='btn btn-success btn-mini' href='#'>
-                                <i class='icon-ok'></i>
-                            </a>
-                            <a class='btn btn-danger btn-mini' href='#'>
-                                <i class='icon-remove'></i>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Lilly Nitzsche</td>
-                    <td>rebeca@yahoo.com</td>
-                    <td>
-                        <span class='label label-warning'>Warning</span>
-                    </td>
-                    <td>
-                        <div class='text-right'>
-                            <a class='btn btn-success btn-mini' href='#'>
-                                <i class='icon-ok'></i>
-                            </a>
-                            <a class='btn btn-danger btn-mini' href='#'>
-                                <i class='icon-remove'></i>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-<hr class='hr-double' />
-<div class='row-fluid'>
-    <div class='span12 box bordered-box red-border' style='margin-bottom:0;'>
-        <div class='box-header red-background'>
-            <div class='title'>Striped and hovered table</div>
-            <div class='actions'>
-                <a href="#" class="btn box-remove btn-mini btn-link"><i class='icon-remove'></i>
-                </a>
-                <a href="#" class="btn box-collapse btn-mini btn-link"><i></i>
-                </a>
-            </div>
-        </div>
-        <div class='box-content box-no-padding'>
-            <div class='responsive-table'>
-                <div class='scrollable-area'>
-                    <table class='table table-hover table-striped' style='margin-bottom:0;'>
-                        <thead>
-                        <tr>
-                            <th>
-                                Name
-                            </th>
-                            <th>
-                                E-mail
-                            </th>
-                            <th>
-                                Status
-                            </th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Pattie Jenkins</td>
-                            <td>meaghan@yahoo.com</td>
-                            <td>
-                                <span class='label label-warning'>Warning</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Bert Koelpin</td>
-                            <td>dahlia@gmail.com</td>
-                            <td>
-                                <span class='label label-important'>Important</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Melody Gibson</td>
-                            <td>judge@hotmail.com</td>
-                            <td>
-                                <span class='label label-warning'>Warning</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Irma Harvey</td>
-                            <td>letha@yahoo.com</td>
-                            <td>
-                                <span class='label label-warning'>Warning</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Zoila Wiegand</td>
-                            <td>louie@hotmail.com</td>
-                            <td>
-                                <span class='label label-success'>Success</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<hr class='hr-double' />
-<div class='row-fluid'>
-    <div class='span12 box bordered-box green-border' style='margin-bottom:0;'>
-        <div class='box-header green-background'>
-            <div class='title'>Striped, hovered and bordered table</div>
-            <div class='actions'>
-                <a href="#" class="btn box-remove btn-mini btn-link"><i class='icon-remove'></i>
-                </a>
-                <a href="#" class="btn box-collapse btn-mini btn-link"><i></i>
-                </a>
-            </div>
-        </div>
-        <div class='box-content box-no-padding'>
-            <div class='responsive-table'>
-                <div class='scrollable-area'>
-                    <table class='table table-bordered table-hover table-striped' style='margin-bottom:0;'>
-                        <thead>
-                        <tr>
-                            <th>
-                                Name
-                            </th>
-                            <th>
-                                E-mail
-                            </th>
-                            <th>
-                                Status
-                            </th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Nedra O'Kon</td>
-                            <td>kari@gmail.com</td>
-                            <td>
-                                <span class='label label-warning'>Warning</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Raegan Ernser</td>
-                            <td>lois@yahoo.com</td>
-                            <td>
-                                <span class='label label-success'>Success</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Nels Leuschke</td>
-                            <td>madelynn@yahoo.com</td>
-                            <td>
-                                <span class='label label-success'>Success</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>April Daugherty</td>
-                            <td>birdie@hotmail.com</td>
-                            <td>
-                                <span class='label label-important'>Important</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Bradford Goodwin</td>
-                            <td>emelie@gmail.com</td>
-                            <td>
-                                <span class='label label-warning'>Warning</span>
-                            </td>
-                            <td>
-                                <div class='text-right'>
-                                    <a class='btn btn-success btn-mini' href='#'>
-                                        <i class='icon-ok'></i>
-                                    </a>
-                                    <a class='btn btn-danger btn-mini' href='#'>
-                                        <i class='icon-remove'></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class='group-header'>
-    <div class='row-fluid'>
-        <div class='span6 offset3'>
-            <div class='text-center'>
-                <h2>Dynamic tables</h2>
-                <small class='muted'>Dynamic datables can handle large data collections, sorting, filtering...</small>
-            </div>
-        </div>
-    </div>
-</div>
-<div class='row-fluid'>
-<div class='span12 box bordered-box orange-border' style='margin-bottom:0;'>
-<div class='box-header orange-background'>
-    <div class='title'>Sortable data table with pagination</div>
-    <div class='actions'>
-        <a href="#" class="btn box-remove btn-mini btn-link"><i class='icon-remove'></i>
-        </a>
-        <a href="#" class="btn box-collapse btn-mini btn-link"><i></i>
-        </a>
-    </div>
-</div>
-<div class='box-content box-no-padding'>
-<div class='responsive-table'>
-<div class='scrollable-area'>
-<table class='data-table table table-bordered table-striped' style='margin-bottom:0;'>
-<thead>
-<tr>
-    <th>
-        Name
-    </th>
-    <th>
-        E-mail
-    </th>
-    <th>
-        Status
-    </th>
-    <th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Sigurd Klocko</td>
-    <td>norene@hotmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Donald Cummings</td>
-    <td>kane@yahoo.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Gwendolyn Stark</td>
-    <td>jesus@yahoo.com</td>
-    <td>
-        <span class='label label-warning'>Warning</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Angeline Padberg</td>
-    <td>palma@gmail.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Delbert Koch</td>
-    <td>grayson@gmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Josie Roob</td>
-    <td>anastacio@yahoo.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Dana Kilback</td>
-    <td>silas@yahoo.com</td>
-    <td>
-        <span class='label label-warning'>Warning</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Leonel Block</td>
-    <td>sammy@yahoo.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Jeromy Ruecker</td>
-    <td>yasmeen@hotmail.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Janis Crooks</td>
-    <td>kenyatta@yahoo.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Delpha Schinner</td>
-    <td>breanne@yahoo.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Rosemarie Kautzer</td>
-    <td>loy@yahoo.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Araceli Deckow</td>
-    <td>reanna@yahoo.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Karianne Bogisich</td>
-    <td>itzel@gmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Cletus Farrell</td>
-    <td>samantha@gmail.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Kayli Walsh</td>
-    <td>callie@gmail.com</td>
-    <td>
-        <span class='label label-warning'>Warning</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Della O'Kon</td>
-    <td>nellie@yahoo.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Arno McDermott</td>
-    <td>destinee@hotmail.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Nelson Lesch</td>
-    <td>makenna@hotmail.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Pat Wyman</td>
-    <td>eldridge@hotmail.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<hr class='hr-double' />
-<div class='row-fluid'>
-<div class='span12 box bordered-box orange-border' style='margin-bottom:0;'>
-<div class='box-header purple-background'>
-    <div class='title'>Data table with column filter in footer</div>
-    <div class='actions'>
-        <a href="#" class="btn box-remove btn-mini btn-link"><i class='icon-remove'></i>
-        </a>
-        <a href="#" class="btn box-collapse btn-mini btn-link"><i></i>
-        </a>
-    </div>
-</div>
-<div class='box-content box-no-padding'>
-<div class='responsive-table'>
-<div class='scrollable-area'>
-<table class='data-table-column-filter table table-bordered table-striped' style='margin-bottom:0;'>
-<thead>
-<tr>
-    <th>
-        Name
-    </th>
-    <th>
-        E-mail
-    </th>
-    <th>
-        Status
-    </th>
-    <th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Lavern Oberbrunner</td>
-    <td>antonette@hotmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>America Champlin</td>
-    <td>marques@hotmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Stone Herman</td>
-    <td>romaine@yahoo.com</td>
-    <td>
-        <span class='label label-warning'>Warning</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Arjun Ernser</td>
-    <td>estefania@hotmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Marina Zemlak</td>
-    <td>emmanuelle@hotmail.com</td>
-    <td>
-        <span class='label label-warning'>Warning</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Jarvis Cummings</td>
-    <td>amira@hotmail.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Kip Bruen</td>
-    <td>misty@gmail.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Mayra Kohler</td>
-    <td>lizzie@gmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Jamey Ward</td>
-    <td>marty@gmail.com</td>
-    <td>
-        <span class='label label-warning'>Warning</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Ken Beer</td>
-    <td>lenny@yahoo.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Celine Collier</td>
-    <td>kristina@yahoo.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Madaline Klocko</td>
-    <td>rahsaan@gmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Golda Paucek</td>
-    <td>dagmar@yahoo.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Jevon Wisoky</td>
-    <td>mara@gmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Yvonne King</td>
-    <td>pearlie@hotmail.com</td>
-    <td>
-        <span class='label label-warning'>Warning</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Uriel Brakus</td>
-    <td>kyleigh@gmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Bennie Bernhard</td>
-    <td>lexi@gmail.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Juanita Glover</td>
-    <td>jasen@yahoo.com</td>
-    <td>
-        <span class='label label-success'>Success</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Asha Reynolds</td>
-    <td>van@yahoo.com</td>
-    <td>
-        <span class='label label-important'>Important</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Donnell Bode</td>
-    <td>jakob@hotmail.com</td>
-    <td>
-        <span class='label label-warning'>Warning</span>
-    </td>
-    <td>
-        <div class='text-right'>
-            <a class='btn btn-success btn-mini' href='#'>
-                <i class='icon-ok'></i>
-            </a>
-            <a class='btn btn-danger btn-mini' href='#'>
-                <i class='icon-remove'></i>
-            </a>
-        </div>
-    </td>
-</tr>
-</tbody>
-<tfoot>
-<tr>
-    <th>Name</th>
-    <th>E-mail</th>
-    <th colspan='2'>Status</th>
-</tr>
-</tfoot>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-<!-- / jquery -->
-<script src='assets/javascripts/jquery/jquery.min.js' type='text/javascript'></script>
-<!-- / jquery mobile events (for touch and slide) -->
-<script src='assets/javascripts/plugins/mobile_events/jquery.mobile-events.min.js' type='text/javascript'></script>
-<!-- / jquery migrate (for compatibility with new jquery) -->
-<script src='assets/javascripts/jquery/jquery-migrate.min.js' type='text/javascript'></script>
-<!-- / jquery ui -->
-<script src='assets/javascripts/jquery_ui/jquery-ui.min.js' type='text/javascript'></script>
-<!-- / bootstrap -->
-<script src='assets/javascripts/bootstrap/bootstrap.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/flot/excanvas.js' type='text/javascript'></script>
-<!-- / sparklines -->
-<script src='assets/javascripts/plugins/sparklines/jquery.sparkline.min.js' type='text/javascript'></script>
-<!-- / flot charts -->
-<script src='assets/javascripts/plugins/flot/flot.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/flot/flot.resize.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/flot/flot.pie.js' type='text/javascript'></script>
-<!-- / bootstrap switch -->
-<script src='assets/javascripts/plugins/bootstrap_switch/bootstrapSwitch.min.js' type='text/javascript'></script>
-<!-- / fullcalendar -->
-<script src='assets/javascripts/plugins/fullcalendar/fullcalendar.min.js' type='text/javascript'></script>
-<!-- / datatables -->
-<script src='assets/javascripts/plugins/datatables/jquery.dataTables.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/datatables/jquery.dataTables.columnFilter.js' type='text/javascript'></script>
-<!-- / wysihtml5 -->
-<script src='assets/javascripts/plugins/common/wysihtml5.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/common/bootstrap-wysihtml5.js' type='text/javascript'></script>
-<!-- / select2 -->
-<script src='assets/javascripts/plugins/select2/select2.js' type='text/javascript'></script>
-<!-- / color picker -->
-<script src='assets/javascripts/plugins/bootstrap_colorpicker/bootstrap-colorpicker.min.js' type='text/javascript'></script>
-<!-- / mention -->
-<script src='assets/javascripts/plugins/mention/mention.min.js' type='text/javascript'></script>
-<!-- / input mask -->
-<script src='assets/javascripts/plugins/input_mask/bootstrap-inputmask.min.js' type='text/javascript'></script>
-<!-- / fileinput -->
-<script src='assets/javascripts/plugins/fileinput/bootstrap-fileinput.js' type='text/javascript'></script>
-<!-- / modernizr -->
-<script src='assets/javascripts/plugins/modernizr/modernizr.min.js' type='text/javascript'></script>
-<!-- / retina -->
-<script src='assets/javascripts/plugins/retina/retina.js' type='text/javascript'></script>
-<!-- / fileupload -->
-<script src='assets/javascripts/plugins/fileupload/tmpl.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/fileupload/load-image.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/fileupload/canvas-to-blob.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/fileupload/jquery.iframe-transport.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/fileupload/jquery.fileupload.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/fileupload/jquery.fileupload-fp.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/fileupload/jquery.fileupload-ui.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/fileupload/jquery.fileupload-init.js' type='text/javascript'></script>
-<!-- / timeago -->
-<script src='assets/javascripts/plugins/timeago/jquery.timeago.js' type='text/javascript'></script>
-<!-- / slimscroll -->
-<script src='assets/javascripts/plugins/slimscroll/jquery.slimscroll.min.js' type='text/javascript'></script>
-<!-- / autosize (for textareas) -->
-<script src='assets/javascripts/plugins/autosize/jquery.autosize-min.js' type='text/javascript'></script>
-<!-- / charCount -->
-<script src='assets/javascripts/plugins/charCount/charCount.js' type='text/javascript'></script>
-<!-- / validate -->
-<script src='assets/javascripts/plugins/validate/jquery.validate.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/validate/additional-methods.js' type='text/javascript'></script>
-<!-- / naked password -->
-<script src='assets/javascripts/plugins/naked_password/naked_password-0.2.4.min.js' type='text/javascript'></script>
-<!-- / nestable -->
-<script src='assets/javascripts/plugins/nestable/jquery.nestable.js' type='text/javascript'></script>
-<!-- / tabdrop -->
-<script src='assets/javascripts/plugins/tabdrop/bootstrap-tabdrop.js' type='text/javascript'></script>
-<!-- / jgrowl -->
-<script src='assets/javascripts/plugins/jgrowl/jquery.jgrowl.min.js' type='text/javascript'></script>
-<!-- / bootbox -->
-<script src='assets/javascripts/plugins/bootbox/bootbox.min.js' type='text/javascript'></script>
-<!-- / inplace editing -->
-<script src='assets/javascripts/plugins/xeditable/bootstrap-editable.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/xeditable/wysihtml5.js' type='text/javascript'></script>
-<!-- / ckeditor -->
-<script src='assets/javascripts/plugins/ckeditor/ckeditor.js' type='text/javascript'></script>
-<!-- / filetrees -->
-<script src='assets/javascripts/plugins/dynatree/jquery.dynatree.min.js' type='text/javascript'></script>
-<!-- / datetime picker -->
-<script src='assets/javascripts/plugins/bootstrap_datetimepicker/bootstrap-datetimepicker.js' type='text/javascript'></script>
-<!-- / daterange picker -->
-<script src='assets/javascripts/plugins/bootstrap_daterangepicker/moment.min.js' type='text/javascript'></script>
-<script src='assets/javascripts/plugins/bootstrap_daterangepicker/bootstrap-daterangepicker.js' type='text/javascript'></script>
-<!-- / max length -->
-<script src='assets/javascripts/plugins/bootstrap_maxlength/bootstrap-maxlength.min.js' type='text/javascript'></script>
-<!-- / dropdown hover -->
-<script src='assets/javascripts/plugins/bootstrap_hover_dropdown/twitter-bootstrap-hover-dropdown.min.js' type='text/javascript'></script>
-<!-- / slider nav (address book) -->
-<script src='assets/javascripts/plugins/slider_nav/slidernav-min.js' type='text/javascript'></script>
-<!-- / fuelux -->
-<script src='assets/javascripts/plugins/fuelux/wizard.js' type='text/javascript'></script>
-<!-- / flatty theme -->
-<script src='assets/javascripts/nav.js' type='text/javascript'></script>
-<script src='assets/javascripts/tables.js' type='text/javascript'></script>
-<script src='assets/javascripts/theme.js' type='text/javascript'></script>
-<!-- / demo -->
-<script src='assets/javascripts/demo/jquery.mockjax.js' type='text/javascript'></script>
-<script src='assets/javascripts/demo/inplace_editing.js' type='text/javascript'></script>
-<script src='assets/javascripts/demo/charts.js' type='text/javascript'></script>
-<script src='assets/javascripts/demo/demo.js' type='text/javascript'></script>
-<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Bootstrap表格插件 - Bootstrap后台管理系统模版Ace下载</title>
+		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
+		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="#" class="navbar-brand">
+						<small>
+							<i class="icon-leaf"></i>
+							Ace Admin
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="grey">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-tasks"></i>
+								<span class="badge badge-grey">4</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-ok"></i>
+									4 Tasks to complete
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Software Update</span>
+											<span class="pull-right">65%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:65%" class="progress-bar "></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Hardware Upgrade</span>
+											<span class="pull-right">35%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:35%" class="progress-bar progress-bar-danger"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Unit Testing</span>
+											<span class="pull-right">15%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:15%" class="progress-bar progress-bar-warning"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Bug Fixes</span>
+											<span class="pull-right">90%</span>
+										</div>
+
+										<div class="progress progress-mini progress-striped active">
+											<div style="width:90%" class="progress-bar progress-bar-success"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										See tasks with details
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="purple">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-bell-alt icon-animated-bell"></i>
+								<span class="badge badge-important">8</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-warning-sign"></i>
+									8 Notifications
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-pink icon-comment"></i>
+												New Comments
+											</span>
+											<span class="pull-right badge badge-info">+12</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="btn btn-xs btn-primary icon-user"></i>
+										Bob just signed up as an editor ...
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-shopping-cart"></i>
+												New Orders
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-info icon-twitter"></i>
+												Followers
+											</span>
+											<span class="pull-right badge badge-info">+11</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										See all notifications
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="green">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-success">5</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-envelope-alt"></i>
+									5 Messages
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Alex:</span>
+												Ciao sociis natoque penatibus et auctor ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>a moment ago</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Susan:</span>
+												Vestibulum id ligula porta felis euismod ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>20 minutes ago</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Bob:</span>
+												Nullam quis risus eget urna mollis ornare ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>3:15 pm</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="inbox.html">
+										See all messages
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>Welcome,</small>
+									Jason
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="icon-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+						<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+							<button class="btn btn-success">
+								<i class="icon-signal"></i>
+							</button>
+
+							<button class="btn btn-info">
+								<i class="icon-pencil"></i>
+							</button>
+
+							<button class="btn btn-warning">
+								<i class="icon-group"></i>
+							</button>
+
+							<button class="btn btn-danger">
+								<i class="icon-cogs"></i>
+							</button>
+						</div>
+
+						<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+							<span class="btn btn-success"></span>
+
+							<span class="btn btn-info"></span>
+
+							<span class="btn btn-warning"></span>
+
+							<span class="btn btn-danger"></span>
+						</div>
+					</div><!-- #sidebar-shortcuts -->
+<ul class="nav nav-list">
+						<li class="active">
+							<a href="index.html">
+								<i class="icon-dashboard"></i>
+								<span class="menu-text"> 控制台 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="typography.html">
+								<i class="icon-text-width"></i>
+								<span class="menu-text"> 文字排版 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-desktop"></i>
+								<span class="menu-text"> UI 组件 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										组件
+									</a>
+								</li>
+
+								<li>
+									<a href="buttons.html">
+										<i class="icon-double-angle-right"></i>
+										按钮 &amp; 图表
+									</a>
+								</li>
+
+								<li>
+									<a href="treeview.html">
+										<i class="icon-double-angle-right"></i>
+										树菜单
+									</a>
+								</li>
+
+								<li>
+									<a href="jquery-ui.html">
+										<i class="icon-double-angle-right"></i>
+										jQuery UI
+									</a>
+								</li>
+
+								<li>
+									<a href="nestable-list.html">
+										<i class="icon-double-angle-right"></i>
+										可拖拽列表
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="dropdown-toggle">
+										<i class="icon-double-angle-right"></i>
+
+										三级菜单
+										<b class="arrow icon-angle-down"></b>
+									</a>
+
+									<ul class="submenu">
+										<li>
+											<a href="#">
+												<i class="icon-leaf"></i>
+												第一级
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="dropdown-toggle">
+												<i class="icon-pencil"></i>
+
+												第四级
+												<b class="arrow icon-angle-down"></b>
+											</a>
+
+											<ul class="submenu">
+												<li>
+													<a href="#">
+														<i class="icon-plus"></i>
+														添加产品
+													</a>
+												</li>
+
+												<li>
+													<a href="#">
+														<i class="icon-eye-open"></i>
+														查看商品
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 表格 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li class="active">
+									<a href="tables.html">
+										<i class="icon-double-angle-right"></i>
+										简单 &amp; 动态
+									</a>
+								</li>
+
+								<li>
+									<a href="jqgrid.html">
+										<i class="icon-double-angle-right"></i>
+										jqGrid plugin
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-edit"></i>
+								<span class="menu-text"> 表单 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="form-elements.html">
+										<i class="icon-double-angle-right"></i>
+										表单组件
+									</a>
+								</li>
+
+								<li>
+									<a href="form-wizard.html">
+										<i class="icon-double-angle-right"></i>
+										向导提示 &amp; 验证
+									</a>
+								</li>
+
+								<li>
+									<a href="wysiwyg.html">
+										<i class="icon-double-angle-right"></i>
+										编辑器
+									</a>
+								</li>
+
+								<li>
+									<a href="dropzone.html">
+										<i class="icon-double-angle-right"></i>
+										文件上传
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="widgets.html">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 插件 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="calendar.html">
+								<i class="icon-calendar"></i>
+
+								<span class="menu-text">
+									日历
+									<span class="badge badge-transparent tooltip-error" title="2&nbsp;Important&nbsp;Events">
+										<i class="icon-warning-sign red bigger-130"></i>
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="gallery.html">
+								<i class="icon-picture"></i>
+								<span class="menu-text"> 相册 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-tag"></i>
+								<span class="menu-text"> 更多页面 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="profile.html">
+										<i class="icon-double-angle-right"></i>
+										用户信息
+									</a>
+								</li>
+
+								<li>
+									<a href="inbox.html">
+										<i class="icon-double-angle-right"></i>
+										收件箱
+									</a>
+								</li>
+
+								<li>
+									<a href="pricing.html">
+										<i class="icon-double-angle-right"></i>
+										售价单
+									</a>
+								</li>
+
+								<li>
+									<a href="invoice.html">
+										<i class="icon-double-angle-right"></i>
+										购物车
+									</a>
+								</li>
+
+								<li>
+									<a href="timeline.html">
+										<i class="icon-double-angle-right"></i>
+										时间轴
+									</a>
+								</li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-double-angle-right"></i>
+										登录 &amp; 注册
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-file-alt"></i>
+
+								<span class="menu-text">
+									其他页面
+									<span class="badge badge-primary ">5</span>
+								</span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="faq.html">
+										<i class="icon-double-angle-right"></i>
+										帮助
+									</a>
+								</li>
+
+								<li>
+									<a href="error-404.html">
+										<i class="icon-double-angle-right"></i>
+										404错误页面
+									</a>
+								</li>
+
+								<li>
+									<a href="error-500.html">
+										<i class="icon-double-angle-right"></i>
+										500错误页面
+									</a>
+								</li>
+
+								<li>
+									<a href="grid.html">
+										<i class="icon-double-angle-right"></i>
+										网格
+									</a>
+								</li>
+
+								<li>
+									<a href="blank.html">
+										<i class="icon-double-angle-right"></i>
+										空白页面
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+
+							<li>
+								<a href="#">Tables</a>
+							</li>
+							<li class="active">Simple &amp; Dynamic</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								Tables
+								<small>
+									<i class="icon-double-angle-right"></i>
+									Static &amp; Dynamic Tables
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="table-responsive">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</th>
+														<th>Domain</th>
+														<th>Price</th>
+														<th class="hidden-480">Clicks</th>
+
+														<th>
+															<i class="icon-time bigger-110 hidden-480"></i>
+															Update
+														</th>
+														<th class="hidden-480">Status</th>
+
+														<th></th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">ace.com</a>
+														</td>
+														<td>$45</td>
+														<td class="hidden-480">3,330</td>
+														<td>Feb 12</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">Expiring</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																<button class="btn btn-xs btn-success">
+																	<i class="icon-ok bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-info">
+																	<i class="icon-edit bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-danger">
+																	<i class="icon-trash bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-warning">
+																	<i class="icon-flag bigger-120"></i>
+																</button>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-cog icon-only bigger-110"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">base.com</a>
+														</td>
+														<td>$35</td>
+														<td class="hidden-480">2,595</td>
+														<td>Feb 18</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-success">Registered</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																<button class="btn btn-xs btn-success">
+																	<i class="icon-ok bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-info">
+																	<i class="icon-edit bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-danger">
+																	<i class="icon-trash bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-warning">
+																	<i class="icon-flag bigger-120"></i>
+																</button>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-cog icon-only bigger-110"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">max.com</a>
+														</td>
+														<td>$60</td>
+														<td class="hidden-480">4,400</td>
+														<td>Mar 11</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">Expiring</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																<button class="btn btn-xs btn-success">
+																	<i class="icon-ok bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-info">
+																	<i class="icon-edit bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-danger">
+																	<i class="icon-trash bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-warning">
+																	<i class="icon-flag bigger-120"></i>
+																</button>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-cog icon-only bigger-110"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">best.com</a>
+														</td>
+														<td>$75</td>
+														<td class="hidden-480">6,500</td>
+														<td>Apr 03</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-inverse arrowed-in">Flagged</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																<button class="btn btn-xs btn-success">
+																	<i class="icon-ok bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-info">
+																	<i class="icon-edit bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-danger">
+																	<i class="icon-trash bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-warning">
+																	<i class="icon-flag bigger-120"></i>
+																</button>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-cog icon-only bigger-110"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">pro.com</a>
+														</td>
+														<td>$55</td>
+														<td class="hidden-480">4,250</td>
+														<td>Jan 21</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-success">Registered</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																<button class="btn btn-xs btn-success">
+																	<i class="icon-ok bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-info">
+																	<i class="icon-edit bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-danger">
+																	<i class="icon-trash bigger-120"></i>
+																</button>
+
+																<button class="btn btn-xs btn-warning">
+																	<i class="icon-flag bigger-120"></i>
+																</button>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-cog icon-only bigger-110"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div><!-- /.table-responsive -->
+									</div><!-- /span -->
+								</div><!-- /row -->
+
+								<div class="hr hr-18 dotted hr-double"></div>
+
+								<h4 class="pink">
+									<i class="icon-hand-right icon-animated-hand-pointer blue"></i>
+									<a href="#modal-table" role="button" class="green" data-toggle="modal"> Table Inside a Modal Box </a>
+								</h4>
+
+								<div class="hr hr-18 dotted hr-double"></div>
+
+								<div class="row">
+									<div class="col-xs-12">
+										<h3 class="header smaller lighter blue">jQuery dataTables</h3>
+										<div class="table-header">
+											Results for "Latest Registered Domains"
+										</div>
+
+										<div class="table-responsive">
+											<table id="sample-table-2" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</th>
+														<th>Domain</th>
+														<th>Price</th>
+														<th class="hidden-480">Clicks</th>
+
+														<th>
+															<i class="icon-time bigger-110 hidden-480"></i>
+															Update
+														</th>
+														<th class="hidden-480">Status</th>
+
+														<th></th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">app.com</a>
+														</td>
+														<td>$45</td>
+														<td class="hidden-480">3,330</td>
+														<td>Feb 12</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">Expiring</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">base.com</a>
+														</td>
+														<td>$35</td>
+														<td class="hidden-480">2,595</td>
+														<td>Feb 18</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-success">Registered</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">max.com</a>
+														</td>
+														<td>$60</td>
+														<td class="hidden-480">4,400</td>
+														<td>Mar 11</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">Expiring</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">best.com</a>
+														</td>
+														<td>$75</td>
+														<td class="hidden-480">6,500</td>
+														<td>Apr 03</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-inverse arrowed-in">Flagged</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">pro.com</a>
+														</td>
+														<td>$55</td>
+														<td class="hidden-480">4,250</td>
+														<td>Jan 21</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-success">Registered</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">team.com</a>
+														</td>
+														<td>$40</td>
+														<td class="hidden-480">3,200</td>
+														<td>Feb 09</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-inverse arrowed-in">Flagged</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">up.com</a>
+														</td>
+														<td>$95</td>
+														<td class="hidden-480">8,520</td>
+														<td>Feb 22</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-info arrowed arrowed-righ">Sold</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">view.com</a>
+														</td>
+														<td>$45</td>
+														<td class="hidden-480">4,100</td>
+														<td>Mar 12</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-success">Registered</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">nice.com</a>
+														</td>
+														<td>$38</td>
+														<td class="hidden-480">3,940</td>
+														<td>Feb 12</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-info arrowed arrowed-righ">Sold</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">fine.com</a>
+														</td>
+														<td>$25</td>
+														<td class="hidden-480">2,983</td>
+														<td>Apr 01</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">Expiring</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">good.com</a>
+														</td>
+														<td>$50</td>
+														<td class="hidden-480">6,500</td>
+														<td>Feb 02</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-inverse arrowed-in">Flagged</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">great.com</a>
+														</td>
+														<td>$55</td>
+														<td class="hidden-480">6,400</td>
+														<td>Feb 24</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-success">Registered</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">shine.com</a>
+														</td>
+														<td>$25</td>
+														<td class="hidden-480">2,200</td>
+														<td>Apr 01</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-inverse arrowed-in">Flagged</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">rise.com</a>
+														</td>
+														<td>$42</td>
+														<td class="hidden-480">3,900</td>
+														<td>Feb 01</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-info arrowed arrowed-righ">Sold</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">above.com</a>
+														</td>
+														<td>$35</td>
+														<td class="hidden-480">3,420</td>
+														<td>Mar 12</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">Expiring</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">share.com</a>
+														</td>
+														<td>$30</td>
+														<td class="hidden-480">3,200</td>
+														<td>Feb 11</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-info arrowed arrowed-righ">Sold</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">fair.com</a>
+														</td>
+														<td>$35</td>
+														<td class="hidden-480">3,900</td>
+														<td>Mar 26</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-inverse arrowed-in">Flagged</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">year.com</a>
+														</td>
+														<td>$48</td>
+														<td class="hidden-480">3,990</td>
+														<td>Feb 15</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">Expiring</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">day.com</a>
+														</td>
+														<td>$55</td>
+														<td class="hidden-480">5,600</td>
+														<td>Jan 29</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-info arrowed arrowed-righ">Sold</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">light.com</a>
+														</td>
+														<td>$40</td>
+														<td class="hidden-480">3,100</td>
+														<td>Feb 17</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-success">Registered</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">sight.com</a>
+														</td>
+														<td>$58</td>
+														<td class="hidden-480">6,100</td>
+														<td>Feb 19</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-inverse arrowed-in">Flagged</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">right.com</a>
+														</td>
+														<td>$50</td>
+														<td class="hidden-480">4,400</td>
+														<td>Apr 01</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">Expiring</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>
+															<a href="#">once.com</a>
+														</td>
+														<td>$20</td>
+														<td class="hidden-480">1,400</td>
+														<td>Apr 04</td>
+
+														<td class="hidden-480">
+															<span class="label label-sm label-info arrowed arrowed-righ">Sold</span>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="blue" href="#">
+																	<i class="icon-zoom-in bigger-130"></i>
+																</a>
+
+																<a class="green" href="#">
+																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="#">
+																	<i class="icon-trash bigger-130"></i>
+																</a>
+															</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-caret-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="icon-zoom-in bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="icon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<div id="modal-table" class="modal fade" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header no-padding">
+												<div class="table-header">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+														<span class="white">&times;</span>
+													</button>
+													Results for "Latest Registered Domains
+												</div>
+											</div>
+
+											<div class="modal-body no-padding">
+												<table class="table table-striped table-bordered table-hover no-margin-bottom no-border-top">
+													<thead>
+														<tr>
+															<th>Domain</th>
+															<th>Price</th>
+															<th>Clicks</th>
+
+															<th>
+																<i class="icon-time bigger-110"></i>
+																Update
+															</th>
+														</tr>
+													</thead>
+
+													<tbody>
+														<tr>
+															<td>
+																<a href="#">ace.com</a>
+															</td>
+															<td>$45</td>
+															<td>3,330</td>
+															<td>Feb 12</td>
+														</tr>
+
+														<tr>
+															<td>
+																<a href="#">base.com</a>
+															</td>
+															<td>$35</td>
+															<td>2,595</td>
+															<td>Feb 18</td>
+														</tr>
+
+														<tr>
+															<td>
+																<a href="#">max.com</a>
+															</td>
+															<td>$60</td>
+															<td>4,400</td>
+															<td>Mar 11</td>
+														</tr>
+
+														<tr>
+															<td>
+																<a href="#">best.com</a>
+															</td>
+															<td>$75</td>
+															<td>6,500</td>
+															<td>Apr 03</td>
+														</tr>
+
+														<tr>
+															<td>
+																<a href="#">pro.com</a>
+															</td>
+															<td>$55</td>
+															<td>4,250</td>
+															<td>Jan 21</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+											<div class="modal-footer no-margin-top">
+												<button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
+													<i class="icon-remove"></i>
+													Close
+												</button>
+
+												<ul class="pagination pull-right no-margin">
+													<li class="prev disabled">
+														<a href="#">
+															<i class="icon-double-angle-left"></i>
+														</a>
+													</li>
+
+													<li class="active">
+														<a href="#">1</a>
+													</li>
+
+													<li>
+														<a href="#">2</a>
+													</li>
+
+													<li>
+														<a href="#">3</a>
+													</li>
+
+													<li class="next">
+														<a href="#">
+															<i class="icon-double-angle-right"></i>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div><!-- /.modal-content -->
+									</div><!-- /.modal-dialog -->
+								</div><!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+				<div class="ace-settings-container" id="ace-settings-container">
+					<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+						<i class="icon-cog bigger-150"></i>
+					</div>
+
+					<div class="ace-settings-box" id="ace-settings-box">
+						<div>
+							<div class="pull-left">
+								<select id="skin-colorpicker" class="hide">
+									<option data-skin="default" value="#438EB9">#438EB9</option>
+									<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+									<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+									<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+								</select>
+							</div>
+							<span>&nbsp; Choose Skin</span>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+							<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+							<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+							<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+							<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+							<label class="lbl" for="ace-settings-add-container">
+								Inside
+								<b>.container</b>
+							</label>
+						</div>
+					</div>
+				</div><!-- /#ace-settings-container -->
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/jquery.dataTables.min.js"></script>
+		<script src="assets/js/jquery.dataTables.bootstrap.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			jQuery(function($) {
+				var oTable1 = $('#sample-table-2').dataTable( {
+				"aoColumns": [
+			      { "bSortable": false },
+			      null, null,null, null, null,
+				  { "bSortable": false }
+				] } );
+				
+				
+				$('table th input:checkbox').on('click' , function(){
+					var that = this;
+					$(this).closest('table').find('tr > td:first-child input:checkbox')
+					.each(function(){
+						this.checked = that.checked;
+						$(this).closest('tr').toggleClass('selected');
+					});
+						
+				});
+			
+			
+				$('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+				function tooltip_placement(context, source) {
+					var $source = $(source);
+					var $parent = $source.closest('table')
+					var off1 = $parent.offset();
+					var w1 = $parent.width();
+			
+					var off2 = $source.offset();
+					var w2 = $source.width();
+			
+					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+					return 'left';
+				}
+			})
+		</script>
+	<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 </body>
 </html>
